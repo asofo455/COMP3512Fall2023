@@ -1,3 +1,9 @@
+<?php
+
+require_once("include/config.inc.php");
+
+?>
+
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
