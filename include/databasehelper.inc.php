@@ -40,7 +40,7 @@ class DatabaseHelper {
         FROM artists INNER JOIN types ON artists.artists_type_id = types.type_id ORDER BY artist_name";
 
         public function __construct($connection) {
-            $this->pdo = $connection;
+            $this->$pdo = $connection;
 
         }
         // get all 
