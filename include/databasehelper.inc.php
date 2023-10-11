@@ -1,7 +1,5 @@
 <?php
 
-use DatabaseHelper as GlobalDatabaseHelper;
-
 class DatabaseHelper {
     /* Function returns a connection object to a database */
     public static function createConnection($values=array()) {
