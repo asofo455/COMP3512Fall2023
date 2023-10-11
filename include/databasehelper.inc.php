@@ -64,4 +64,19 @@ class DatabaseHelper {
         }
     }
 
+    class GenresDB{
+        private static $baseSQL = "SELECT genre_id, genre_name FROM genres ORDER BY 
+        genre_name";
+
+        public function __construct($connection) {
+            $this->pdo = $connection;
+        }
+        // get all
+        public function getAll(){
+            $sql = self::$baseSQL;
+            $statement = DatabaseHelper::runQuery($this->pdo, $sql,null);
+            return $statement->fetchAll();
+        }
+    }
+
  ?>
