@@ -79,4 +79,12 @@ class DatabaseHelper {
         }
     }
 
+    class SongsDB{
+        private static $baseSQL = "";
+
+        public function __construct($connection) {
+            $this->pdo = $connection;
+        }
+    }
+
  ?>
