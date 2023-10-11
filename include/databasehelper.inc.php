@@ -38,7 +38,7 @@ class DatabaseHelper {
         FROM artists INNER JOIN types ON artists.artists_type_id = types.type_id ORDER BY artist_name";
 
         public function __construct($connection) {
-            $this->$pdo = $connection;
+            $this->pdo = $connection;
 
         }
         // get all 
@@ -49,4 +49,19 @@ class DatabaseHelper {
         }
     }
 
-?>
+    class TypesDB{
+        private static $baseSQL = "SELECT type_id, type_name FROM 
+        ORDER BY type_name";
+
+        public function __construct($connection) {
+            $this->pdo = $connection;
+        }
+        //get all
+        public function getAll(){
+            $sql = self::$baseSQL;
+            $statement = DatabaseHelper::runQuery($this->pdo, $sql,null);
+            return $statement->fetchAll();
+        }
+    }
+
+ ?>
