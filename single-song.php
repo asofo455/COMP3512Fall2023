@@ -43,10 +43,12 @@ catch (Exception $e) {
     </nav>
 </header>
 
+<!-- ERROR IN THE MAIN SECTION / FOREACH -->
+
 <main>
 <section>
     <!--loop through SongDB class to retrieve info--> 
-    <?php foreach($songs as $s) {} ?>
+    <?php foreach($songs as $s){}?>
     <!--list for song information--> 
     <h2 class="ui header">Here's the Song!</h2> 
     <div class="container">
@@ -76,8 +78,8 @@ catch (Exception $e) {
         <li><span>popularity <progress class="eight" max="100" value="<?= $s['popularity']; ?>"></progress></span><span class="nums"><?= $s['popularity']; ?> / 100</span></li><br>
 </div>
 
-    </ul>
-    </div>
+    
+    
 
 </section>
 
