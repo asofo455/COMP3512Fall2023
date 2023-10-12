@@ -2,15 +2,17 @@
 
 class DatabaseHelper {
     /* Function returns a connection object to a database */
-    public static function createConnection($values=array()) {
+    public static function createConnection($values = array()) {
         $connString = $values[0];
         $user = $values[1];
         $password = $values[2];
+        
         $pdo = new PDO($connString, $user, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
-
+ 
+   
     }
 
     public static function runQuery($connection, $sql, $parameters) {
@@ -34,12 +36,17 @@ class DatabaseHelper {
     }
 }
     class ArtistsDB{
+
+        // adding a provate PDO to try and fix the pdo issue 
+        private PDO $pdo;
+
+        
         private static $baseSQL = "SELECT artist_id, artist_name, artists.artist_type_id, type_id, type_name 
         FROM artists INNER JOIN types ON artists.artists_type_id = types.type_id ORDER BY artist_name";
 
         public function __construct($connection) {
             $this->pdo = $connection;
-
+         
         }
         // get all 
         public function getAll(){
