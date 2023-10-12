@@ -38,7 +38,7 @@ require_once("include/config.inc.php");
         <li><span>Artist Type: <?= $s['type_name'] ?></span></li>
         <li><span>Genre: <?= $s['genre_name'] ?></span></li>
         <li><span>Year: <?= $s['year'] ?></span></li>
-        <li><span>Duration: <?= convertSeconds($s['duration']); ?></span></li>
+        <li><span>Duration: <?= $s['duration']; ?></span></li>
 
     </ul>
 
