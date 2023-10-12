@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2023 at 11:09 PM
+-- Generation Time: Oct 12, 2023 at 10:33 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,23 +24,43 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `types`
+-- Table structure for table `genres`
 --
 
-CREATE TABLE `types` (
-  `type_id` int(11) NOT NULL,
-  `type_name` text NOT NULL
+CREATE TABLE `genres` (
+  `genre_id` int(11) NOT NULL,
+  `genre_name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `types`
+-- Dumping data for table `genres`
 --
 
-INSERT INTO `types` (`type_id`, `type_name`) VALUES
-(1, 'Band/Group'),
-(2, 'Duo'),
-(3, 'Solo'),
-(4, 'Trio');
+INSERT INTO `genres` (`genre_id`, `genre_name`) VALUES
+(101, 'afroswing'),
+(102, 'alt z'),
+(103, 'art pop'),
+(104, 'atl hip hop'),
+(105, 'boy band'),
+(106, 'brostep'),
+(107, 'cali rap'),
+(121, 'r&b'),
+(108, 'canadian hip hop'),
+(109, 'chicago rap'),
+(115, 'conscious hip hop'),
+(120, 'contemporary country'),
+(110, 'dance pop'),
+(111, 'dfw rap'),
+(112, 'emo rap'),
+(113, 'folk-pop'),
+(114, 'grime'),
+(115, 'hip hop'),
+(116, 'indie pop'),
+(123, 'k-pop'),
+(117, 'latin'),
+(118, 'melodic rap'),
+(124, 'modern rock'),
+(119, 'pop');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
