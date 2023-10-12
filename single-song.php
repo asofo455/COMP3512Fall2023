@@ -60,7 +60,7 @@ catch (Exception $e) {
         <li><span>Year: <?= $s['year'] ?></span></li>
         <li><span>Duration: <?= $s['duration']; ?></span></li>
 
-    </ul>
+  
 
     </div>
 
@@ -79,8 +79,9 @@ catch (Exception $e) {
 </div>
 
 <?php } ?>
-    
-
+</ul>
+    </ul>
+    </div>
 </section>
 
 </main>
