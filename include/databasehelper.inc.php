@@ -40,7 +40,7 @@ class DatabaseHelper {
         // adding a provate PDO to try and fix the pdo issue 
         private PDO $pdo;
 
-        
+
         private static $baseSQL = "SELECT artist_id, artist_name, artists.artist_type_id, type_id, type_name 
         FROM artists INNER JOIN types ON artists.artists_type_id = types.type_id ORDER BY artist_name";
 
@@ -57,6 +57,7 @@ class DatabaseHelper {
     }
 
     class TypesDB{
+        private $pdo;
         private static $baseSQL = "SELECT type_id, type_name FROM 
         ORDER BY type_name";
 
@@ -72,6 +73,7 @@ class DatabaseHelper {
     }
 
     class GenresDB{
+        private $pdo;
         private static $baseSQL = "SELECT genre_id, genre_name FROM genres ORDER BY 
         genre_name";
 
@@ -87,6 +89,7 @@ class DatabaseHelper {
     }
 
     class SongsDB{
+        private $pdo;
         private static $baseSQL = "SELECT song_id, title, song.artist_id, artist_name, artisit_type_id,type_id, type_name, songs.genre_id, genre_name, year, bpm, energy, 
         danceability, loudness, liveness, valence, duration, acousticness, speechiness, popularity
         FROM (((songs
