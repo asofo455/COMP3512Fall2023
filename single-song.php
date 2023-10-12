@@ -78,7 +78,7 @@ catch (Exception $e) {
         <li><span>popularity <progress class="eight" max="100" value="<?= $s['popularity']; ?>"></progress></span><span class="nums"><?= $s['popularity']; ?> / 100</span></li><br>
 </div>
 
-<?php } ?>
+<?php?>
 </ul>
     </ul>
     </div>
