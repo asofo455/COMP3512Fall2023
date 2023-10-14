@@ -1,3 +1,24 @@
+<?php 
+//includes 
+require_once("include/config.inc.php");
+require_once('include/databasehelper.inc.php');
+
+try{
+$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
+$songData = new SongsDB($conn);
+$songs = $songData->getAll();
+$artistData = new ArtistsDB($conn);
+$artists = $artistData->getAll();
+$genreData = new GenresDB($conn);
+$genres = $genreData->getAll();
+
+}
+catch(Exception $e){
+    die($e->getMessage());
+}
+?>
+
+
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
