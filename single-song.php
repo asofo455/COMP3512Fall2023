@@ -37,8 +37,8 @@ catch (Exception $e) {
     <nav class="flex-container">
         <!--links to other pages on the website--> 
         <a href="index.php" target="_top"></i>Home</a>
-        <a href="brower-search.php" target="_top"></i>Search</a> 
-        <a href="results-page.php" target="_top"></i>Browse </a>
+        <a href="search.php" target="_top"></i>Search</a> 
+        <a href="brower-search-results.php" target="_top"></i>Browse </a>
         <a href="favorites-page.php" target="_top"></i>Favorites</a>  
     </nav>
 </header>
