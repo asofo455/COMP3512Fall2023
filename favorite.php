@@ -14,7 +14,7 @@
  <!--links to other pages on the website-->
  <a href="index.php" target="_top">Home</a>
             <a href="search.php" target="_top">Search</a>
-            <a href="brower-search-results-page.php" target="_top">Browse / Search Results</a>
+            <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a class="current" href="favorite.php" target="_top">Favorites</a>
     </nav>
     <main>
