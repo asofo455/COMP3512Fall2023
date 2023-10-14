@@ -37,7 +37,7 @@ require_once('include/databasehelper.inc.php');
   <a href="index.php" target="_top">Home</a>
             <a class="current" href="search.php" target="_top">Search</a>
             <a href="brower-search-results-page.php" target="_top">Browse / Search Results</a>
-            <a href="favorites.php" target="_top">Favorites</a>
+            <a href="favorite.php" target="_top">Favorites</a>
         </nav>
         </header>
         <main>

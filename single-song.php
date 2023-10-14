@@ -39,7 +39,7 @@ catch (Exception $e) {
         <a href="index.php" target="_top"></i>Home</a>
         <a href="search.php" target="_top"></i>Search</a> 
         <a href="brower-search-results.php" target="_top"></i>Browse </a>
-        <a href="favorites.php" target="_top"></i>Favorites</a>  
+        <a href="favorite.php" target="_top"></i>Favorites</a>  
     </nav>
 </header>
 
