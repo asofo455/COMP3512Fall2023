@@ -40,15 +40,14 @@
                     <?php
                         foreach($songs as $s) { ?>
                         <tr class="info">
-                        <td><a class="link" href= "single-song-page.php?song_id=<?= $s['song_id']; ?>"><?= $s['title']; ?></a></td>
+                        <td><a class="link" href= "single-song.php?song_id=<?= $s['song_id']; ?>"><?= $s['title']; ?></a></td>
                         <td><?= $s['artist_name']; ?></td>
                         <td><?= $s['year']; ?></td>
                         <td><?= $s['genre_name']; ?></td>
                         <td><?= $s['popularity']; ?></td>
-                        <!--remove one song from favorites list. Not working-->
-                        <td><a href="emptyFavorites.php?song_id=<?= $s['song_id']; ?>"><button class="remove">Remove</button></a></td>
+                       
                         <!--When choosing "View" should link back to Single Song Page with correct song using the song_id as querystring-->
-                        <td><a href="single-song-page.php?song_id=<?= $s['song_id']; ?>" target="_blank"><button class="viewButton">View</button></a></td>
+                        <td><a href="single-song.php?song_id=<?= $s['song_id']; ?>" target="_blank"><button class="viewButton">View</button></a></td>
                         </tr>
                         <?php 
                         } ?>

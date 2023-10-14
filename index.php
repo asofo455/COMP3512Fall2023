@@ -11,9 +11,33 @@
 <body>
 <header>
     <nav class="flex-container">
- 
-    </nav>
-
+  <!--links to other pages on the website-->
+  <a class="current" href="index.php" target="_top">Home</a>
+            <a href="search.php" target="_top">Search</a>
+            <a href="brower-search-results-page.php" target="_top">Browse / Search Results</a>
+            <a href="favorite.php" target="_top">Favorites</a>
+        </nav>
+        <main>
+            <section>
+            <!--background image-->
+            <div class="image">
+                <h2>Coming Soon!! Work in progress...</h2>
+                <!--headers that will contain lists-->
+                <table class= "table">
+                    <tr class="headers">
+                        <th>Top Genres</th>
+                        <th>Top Artist</th>
+                        <th>Most Popular Songs</th>
+                        <th>One-hit Wonders</th>
+                        <th>Longest Acoustic Song</th>
+                        <th>At the Club</th>
+                        <th>Running Songs</th>
+                        <th>Studying</th>
+                    </tr>
+                </table>
+            </div>
+            </section>
+        </main>
 <!--github links, course name, and copyright--> 
 <footer>
     <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
