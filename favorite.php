@@ -11,9 +11,52 @@
 <body>
 <header>
     <nav class="flex-container">
- 
+ <!--links to other pages on the website-->
+ <a href="index.php" target="_top">Home</a>
+            <a href="search.php" target="_top">Search</a>
+            <a href="brower-search-results-page.php" target="_top">Browse / Search Results</a>
+            <a class="current" href="favorite.php" target="_top">Favorites</a>
     </nav>
-
+    <main>
+        <section>
+            <!--background image-->
+            <div class="image">
+            <div class="container">
+            <h2>Favorites</h2>
+            </div>
+            <div class="table">
+                <!--table for songs-->
+                <table class="table">
+                    <tr class="headers">
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Year</th>
+                        <th>Genre</th>
+                        <th>Popularity</th>
+                        <!--Remove all items from the favorites list-->
+                        <th><a href="emptyFavorites.php"><button class="removeAll">Remove All</button></a></th>
+                    </tr>
+                    <!--Generate title, artist, year, genre, and popularity score through loop-->
+                    <?php
+                        foreach($songs as $s) { ?>
+                        <tr class="info">
+                        <td><a class="link" href= "single-song-page.php?song_id=<?= $s['song_id']; ?>"><?= $s['title']; ?></a></td>
+                        <td><?= $s['artist_name']; ?></td>
+                        <td><?= $s['year']; ?></td>
+                        <td><?= $s['genre_name']; ?></td>
+                        <td><?= $s['popularity']; ?></td>
+                        <!--remove one song from favorites list. Not working-->
+                        <td><a href="emptyFavorites.php?song_id=<?= $s['song_id']; ?>"><button class="remove">Remove</button></a></td>
+                        <!--When choosing "View" should link back to Single Song Page with correct song using the song_id as querystring-->
+                        <td><a href="single-song-page.php?song_id=<?= $s['song_id']; ?>" target="_blank"><button class="viewButton">View</button></a></td>
+                        </tr>
+                        <?php 
+                        } ?>
+                    </table>
+                </div>
+            </div>
+        </section>
+        </main>
 
     <!--github links, course name, and copyright--> 
 <footer>
