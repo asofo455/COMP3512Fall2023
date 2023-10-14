@@ -90,7 +90,7 @@ class DatabaseHelper {
 
     class SongsDB{
         private $pdo;
-        private static $baseSQL = "SELECT song_id, title, song.artist_id, artist_name, artisit_type_id,type_id, type_name, songs.genre_id, genre_name, year, bpm, energy, 
+        private static $baseSQL = "SELECT song_id, title, artist_id, artist_name, artisit_type_id,type_id, type_name, songs.genre_id, genre_name, year, bpm, energy, 
         danceability, loudness, liveness, valence, duration, acousticness, speechiness, popularity
         FROM (((songs
         INNER JOIN artists ON songs.artist_id = artists.artist_id)
