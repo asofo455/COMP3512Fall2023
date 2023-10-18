@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 require_once("include/config.inc.php");
 require_once('include/databasehelper.inc.php');
@@ -20,12 +20,12 @@ try {
 
 catch (Exception $e) {
     die(''. $e->getMessage());} 
-?>
+?> -->
 
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
-    <meta name="authors" content="Athina Sofocleous & Harsheen Nijjer"/> 
+    <meta name="authors" content="Harsheen Nijjer"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--title-->
     <title>COMP 3512 Assignment 1</title>
@@ -45,11 +45,12 @@ catch (Exception $e) {
 
 <!-- ERROR IN THE MAIN SECTION / FOREACH -->
 
+
 <main>
 <section>
     <!--loop through SongDB class to retrieve info--> 
 
-    <?php foreach($songs as $s) { ?> 
+    <?php foreach($songs as $s) {?> 
     <!--list for song information--> 
     <h2 class="ui header">Here's the Song!</h2> 
     <div class="container">
@@ -90,7 +91,6 @@ catch (Exception $e) {
 <footer>
     <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
     <a href="https://github.com/asofo455/COMP3512Fall2023" target="_blank">Github Repo Link </a>
-    <a href="https://github.com/asofo455" target="_blank">Athina's Github Profile</a>
     <a href="https://github.com/hnijj156" target="_blank">Harsheen's Github Profile</a>
 </div>
 
