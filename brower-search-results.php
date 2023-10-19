@@ -1,7 +1,13 @@
+<?php 
+// includes 
+require_once('includes/config.inc.php');
+require_once('includes/databasehelper.inc.php');
+?>
+
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
-    <meta name="authors" content="Athina Sofocleous & Harsheen Nijjer"/> 
+    <meta name="authors" content="Harsheen Nijjer"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--title-->
     <title>COMP 3512 Assignment 1</title>
@@ -45,9 +51,12 @@
                     <td><?= $result['genre_name']; ?></td>
                     <td><?= $result['popularity']; ?></td>
                     <!--Enable ability to add song to favorites and go to favorites page with correct song-->
-                    <td><a href="addToFavorites.php?song_id=<?= $result['song_id']; ?>" target="_blank"><button class="favButton">Add to favorites</button></a></td>
+                    <td><a href="addToFavorites.php?song_id=<?= $result['song_id']; ?>" target="_blank">
+                    <button class="favButton">Add to favorites</button></a></td>
+                    
                     <!--When choosing "View" should link back to Single Song Page with correct song using the song_id as querystring-->
-                    <td><a href="single-song-page.php?song_id=<?= $result['song_id']; ?>" target="_blank"><button class="viewButton">View</button></a></td>
+                    <td><a href="single-song-page.php?song_id=<?= $result['song_id']; ?>" target="_blank">
+                    <button class="viewButton">View</button></a></td>
                     </tr>
                     <?php 
                 } ?>

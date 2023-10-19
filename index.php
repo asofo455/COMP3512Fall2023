@@ -1,7 +1,13 @@
+<?php 
+// includes 
+require_once('includes/config.inc.php');
+require_once('includes/databasehelper.inc.php');
+?>
+
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
-    <meta name="authors" content="Athina Sofocleous & Harsheen Nijjer"/> 
+    <meta name="authors" content="Harsheen Nijjer"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--title-->
     <title>COMP 3512 Assignment 1</title>
@@ -14,13 +20,11 @@
   <!--links to other pages on the website-->
   <a class="current" href="index.php" target="_top">Home</a>
             <a href="search.php" target="_top">Search</a>
-            <a href="brower-search-results-page.php" target="_top">Browse / Search Results</a>
+            <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a href="favorite.php" target="_top">Favorites</a>
         </nav>
         <main>
             <section>
-            <!--background image-->
-            <div class="image">
                 <h2>Coming Soon!! Work in progress...</h2>
                 <!--headers that will contain lists-->
                 <table class= "table">
@@ -40,9 +44,8 @@
         </main>
 <!--github links, course name, and copyright--> 
 <footer>
-    <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
+    <div class="foot-container">COMP 3512 Web II; Harsheen Nijjer </div>
     <a href="https://github.com/asofo455/COMP3512Fall2023" target="_blank">Github Repo Link </a>
-    <a href="https://github.com/asofo455" target="_blank">Athina's Github Profile</a>
     <a href="https://github.com/hnijj156" target="_blank">Harsheen's Github Profile</a>
 </div>
 

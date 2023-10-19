@@ -1,7 +1,13 @@
+<?php 
+// includes 
+require_once('includes/config.inc.php');
+require_once('includes/databasehelper.inc.php');
+?>
+
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
-    <meta name="authors" content="Athina Sofocleous & Harsheen Nijjer"/> 
+    <meta name="authors" content=" Harsheen Nijjer"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--title-->
     <title>COMP 3512 Assignment 1</title>
@@ -17,6 +23,7 @@
             <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a class="current" href="favorite.php" target="_top">Favorites</a>
     </nav>
+</header>
     <main>
         <section>
             <!--background image-->
@@ -45,9 +52,13 @@
                         <td><?= $s['year']; ?></td>
                         <td><?= $s['genre_name']; ?></td>
                         <td><?= $s['popularity']; ?></td>
-                       
-                        <!--When choosing "View" should link back to Single Song Page with correct song using the song_id as querystring-->
-                        <td><a href="single-song.php?song_id=<?= $s['song_id']; ?>" target="_blank"><button class="viewButton">View</button></a></td>
+
+                        <td><a href="single-song.php?song_id=<?= $s['song_id']; ?>" target="_blank">
+                        <button class="viewButton">View</button></a></td>
+
+                        <td> <a href="emptyfavorite.php?song_id=<?= $s['song_id']; ?>">
+                        <button class="remove">Remove</button></a></td>
+
                         </tr>
                         <?php 
                         } ?>
@@ -59,9 +70,8 @@
 
     <!--github links, course name, and copyright--> 
 <footer>
-    <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
+    <div class="foot-container">COMP 3512 Web II; Harsheen Nijjer </div>
     <a href="https://github.com/asofo455/COMP3512Fall2023" target="_blank">Github Repo Link </a>
-    <a href="https://github.com/asofo455" target="_blank">Athina's Github Profile</a>
     <a href="https://github.com/hnijj156" target="_blank">Harsheen's Github Profile</a>
 </div>
 

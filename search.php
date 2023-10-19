@@ -4,26 +4,13 @@
 require_once("include/config.inc.php");
 require_once('include/databasehelper.inc.php');
 
-// try{
-// $conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
-// $songData = new SongsDB($conn);
-// $songs = $songData->getAll();
-// $artistData = new ArtistsDB($conn);
-// $artists = $artistData->getAll();
-// $genreData = new GenresDB($conn);
-// $genres = $genreData->getAll();
-
-// }
-// catch(Exception $e){
-//     die($e->getMessage());
-// }
-// ?>
+?>
 
 
 <!DOCTYPE html> 
 <head lang="en">
     <meta charset="utf-8">
-    <meta name="authors" content="Athina Sofocleous & Harsheen Nijjer"/> 
+    <meta name="authors" content="Harsheen Nijjer"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--title-->
     <title>COMP 3512 Assignment 1</title>
@@ -36,7 +23,7 @@ require_once('include/databasehelper.inc.php');
   <!--links to other pages on the website-->
   <a href="index.php" target="_top">Home</a>
             <a class="current" href="search.php" target="_top">Search</a>
-            <a href="brower-search-results-page.php" target="_top">Browse / Search Results</a>
+            <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a href="favorite.php" target="_top">Favorites</a>
         </nav>
         </header>
@@ -45,10 +32,11 @@ require_once('include/databasehelper.inc.php');
             <!--background image-->
             <div class="image">
                 <div class="container">
-                    <!--form to conduct search and output to results-page.php-->
+
                     <form action="results-page.php" method="get" target="_blank">
                     <h2>Song Search</h2>
                     <h4>Please select one option:</h4>
+
                     <!--Search by title-->
                     <div class="title">
                     <label for="title">Title: </label>
@@ -122,9 +110,8 @@ require_once('include/databasehelper.inc.php');
 
 <!--github links, course name, and copyright--> 
 <footer>
-    <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
+    <div class="foot-container">COMP 3512 Web II; Harsheen Nijjer </div>
     <a href="https://github.com/asofo455/COMP3512Fall2023" target="_blank">Github Repo Link </a>
-    <a href="https://github.com/asofo455" target="_blank">Athina's Github Profile</a>
     <a href="https://github.com/hnijj156" target="_blank">Harsheen's Github Profile</a>
 </div>
 
