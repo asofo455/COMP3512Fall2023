@@ -1,0 +1,28 @@
+.header{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 20px;
+    color: beige;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    column-width: auto;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: beige;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: blanchedalmond;
+}
+
+.table{
+    width: 50%;
+    height: 0%;
+    margin: auto;
+    justify-content: center;
+    background-color: burlywood;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
