@@ -1,7 +1,7 @@
 <?php
 
-require_once("include/config.inc.php");
-require_once('include/databasehelper.inc.php');
+require("include/config.inc.php");
+require('include/databasehelper.inc.php');
 
 ?> 
 

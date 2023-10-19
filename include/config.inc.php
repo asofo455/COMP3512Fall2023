@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 define('DBHOST', 'localhost');
 define('DBNAME', 'music');
@@ -7,4 +7,4 @@ define('DBPASS', '');
 
 define('DBCONNSTRING','sqlite:./database/music.db');
 
-?>
+?> -->
