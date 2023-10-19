@@ -1,0 +1,31 @@
+.container {
+    width: 50%;
+    height: 0%;
+    margin: auto;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Times New Roman'; 
+    color: peachpuff;
+}
+
+ul{
+    list-style-type: none;
+    padding: 20px;
+}
+
+.nums {
+    padding-left: 50px;
+}
+
+span{
+    font-size: 28px;
+}
+
+h2{
+    font-family: "Times New Roman";
+    font-size: 36px;
+    color: peachpuff;
+    text-align: center;
+    text-decoration: underline;     
+    text-decoration-color: peachpuff; 
+}
