@@ -9,6 +9,7 @@ require_once('include/databasehelper.inc.php');
     <meta charset="utf-8">
     <meta name="authors" content="Harsheen Nijjer"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <!--title-->
     <title>COMP 3512 Assignment 1</title>
 
