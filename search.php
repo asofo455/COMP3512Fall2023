@@ -1,10 +1,10 @@
-<!-- 
+
 <?php 
 //includes 
 require_once("include/config.inc.php");
 require_once('include/databasehelper.inc.php');
 
-?> -->
+?>
 
 
 <!DOCTYPE html> 

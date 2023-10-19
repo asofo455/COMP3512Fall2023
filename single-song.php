@@ -1,30 +1,9 @@
-<!-- <?php
+<?php
 
 require_once("include/config.inc.php");
 require_once('include/databasehelper.inc.php');
 
-try { 
-    $conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
-    $songData = new SongsDB($conn);
-    $artistDB = new ArtistsDB($conn);
-    $genreDB = new GenresDB($conn);
-    $typeDB = new TypesDB($conn);
-
-
-    if (isset($_GET['song_id']) && !empty($_GET['song_id'])) 
-    {
-        $songs = $_GET['song_id'];
-    }
-    else
-    {
-        $songs = null;
-    }
-    
-}
-
-catch (Exception $e) {
-    die(''. $e->getMessage());} 
-?> -->
+?> 
 
 <!DOCTYPE html> 
 <head lang="en">
