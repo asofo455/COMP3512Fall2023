@@ -74,7 +74,7 @@ require_once('include/databasehelper.inc.php');
 
 <!--github links, course name, and copyright--> 
 <footer>
-    <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
+    <div class="foot-container">COMP 3512 Web II; Harsheen Nijjer </div>
     <a href="https://github.com/asofo455/COMP3512Fall2023" target="_blank">Github Repo Link </a>
     <a href="https://github.com/hnijj156" target="_blank">Harsheen's Github Profile</a>
 </div>
