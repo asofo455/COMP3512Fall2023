@@ -1,3 +1,18 @@
+<?php 
+$databasefile = 'database/music.db'; 
+
+try {
+$pdo = new PDO("sqlite:$databasefile");
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+}
+catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
+
+ ?>
+ 
+
 <!-- <?php
 
 class DatabaseHelper {
@@ -157,16 +172,4 @@ class DatabaseHelper {
 
  ?> -->
 
- <?php 
-$databasefile = 'database/music.db'; 
-
-try {
-$pdo = new PDO("sqlite:$databasefile");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-}
-catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
-
- ?>
+ 
