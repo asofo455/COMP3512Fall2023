@@ -1,3 +1,34 @@
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding: 12px;
+    background-color: brown;
+    grid-row: 1/3;
+}
+
+.flex-container > a{
+    margin-right: 15px;
+    color: white;
+}
+
+.flex-container > a:hover {
+    color: coral;
+} 
+a.current {
+    color: coral;
+}
+
 .header{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -25,4 +56,29 @@ h2{
     background-color: brown;
     font-family: 'Times New Roman', Times, serif;
     color: beige;
+}
+
+footer {
+    background-color: black;
+    grid-row: 1/3;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    color: bisque;
+    position: sticky;
+}
+
+footer > a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+footer > a:hover{
+    color: coral;
+} 
+
+footer > a.current{
+    color: coral;
 }
