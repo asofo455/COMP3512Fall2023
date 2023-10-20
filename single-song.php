@@ -30,8 +30,12 @@ require('include/databasehelper.inc.php');
 <main>
 <section>
     <!--loop through SongDB class to retrieve info--> 
-
-    <?php foreach($songs as $s) {  ?>
+    <main>
+    <section>
+        <!--background image-->
+        <div class="image">
+        <!--Loop through SongsDB class to retrieve info-->
+        <?php foreach($songs as $s) {  ?>
             <!--List for song information-->
             <h2 class = "ui header">Here's Your Song!</h2>
             <div class= "container">
@@ -43,14 +47,6 @@ require('include/databasehelper.inc.php');
                 <li><span>Year: <?= $s['year'] ?></li> 
                 <li><span>Duration: <?= convertSeconds($s['duration']); ?></span></li>
             </div>
-
-            <?php 
-            function convertSeconds($s) {
-                $minutes = intval(($s/60)%60);
-                $seconds = $s % 60;
-                return "$minutes:$seconds";
-            }
-            ?>
             <!--List for song analysis and progress bars-->
             <h2 class = "ui header">The Goods</h2>
             <div class="container">
@@ -65,12 +61,20 @@ require('include/databasehelper.inc.php');
                 <li><span>popularity <progress class="eight" max="100" value="<?= $s['popularity']; ?>"></progress></span><span class="nums"><?= $s['popularity']; ?> / 100</span></li><br>
             </div>
         <?php } ?>
-</ul>
-    </ul>
-    </div>
-</section>
-   
+            </ul>
+            </ul>
+        </div>
+    </section>
 </main>
+
+
+<?php 
+    function convertSeconds($s) {
+    $minutes = intval(($s/60)%60);
+    $seconds = $s % 60;
+    return "$minutes:$seconds";
+    }
+?>
 
 <!--github links, course name, and copyright--> 
 <footer>

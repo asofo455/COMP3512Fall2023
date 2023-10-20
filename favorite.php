@@ -2,6 +2,31 @@
 // includes 
 require('include/config.inc.php');
 require('include/databasehelper.inc.php');
+
+// ensure sessions works on this page
+session_start();
+// if no favorites in session, initialize it to empty array
+if(!isset($_SESSION["Favorites"])) {
+    $_SESSION["Favorites"] = [];
+}
+// retrieve favorites array for this user session
+$favorites = $_SESSION["Favorites"];
+//try catch block for single-song-page page
+try {
+    //create connection
+    $conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
+    //connect to class
+    $songData = new SongsDB($conn);
+    $songs = [];
+    //loop to retrieve song_id from favorites array
+    foreach($favorites as $getID){
+        $song = $songData->getSong($getID)[0];
+        $songs[] = $song;
+    }
+//Exceptiona and error handling
+} catch (Exception $e) {
+    die ($e->getMessage());
+}
 ?>
 
 <!DOCTYPE html> 
@@ -22,7 +47,7 @@ require('include/databasehelper.inc.php');
             <a href="search.php" target="_top">Search</a>
             <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a class="current" href="favorite.php" target="_top">Favorites</a>
-    </nav>
+    </nav> 
 </header>
     <main>
         <section>

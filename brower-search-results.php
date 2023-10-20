@@ -1,7 +1,44 @@
 <?php 
 // includes 
-require_once('include/config.inc.php');
-require_once('include/databasehelper.inc.php');
+require('include/config.inc.php');
+require('include/databasehelper.inc.php');
+
+//try catch block for results page
+    try {
+        $conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
+        $songData = new SongsDB($conn);
+        $songs = [];
+
+        // get querystrings from search form
+            if (!empty($_GET['title'])) {
+                $songs = $songData->getTitle($_GET['title']);
+            }
+
+            else if (!empty($_GET['artist_id'])) {
+                $songs = $songData->getAllForArtists($_GET['artist_id']);
+            }
+
+           else if (!empty($_GET['year'])) {
+                echo $_GET['year'];
+                $songs = $songData->getYear($_GET['year']);
+            }  
+
+            else if (!empty($_GET['genre_id'])) {
+                $songs = $songData->getAllForGenres($_GET['genre_id']);
+            }
+
+            else if (!empty($_GET['popularity'])) {
+                echo $_GET['popularity'];
+                $songs = $songData->getPopularity($_GET['popularity']);
+            }
+
+            else if (empty($songs)) {
+                $songs = $songData->getAll();
+            }
+
+    } catch (Exception $e) {
+        die ($e->getMessage());
+    }
 ?>
 
 <!DOCTYPE html> 
@@ -65,10 +102,6 @@ require_once('include/databasehelper.inc.php');
         </div>
     </section>
 </main>
-
-
-
-
 
     
 <!--github links, course name, and copyright--> 
