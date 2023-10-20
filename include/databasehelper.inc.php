@@ -11,9 +11,9 @@ catch (PDOException $e) {
 }
 
  ?>
- 
 
-<!-- <?php
+
+<?php
 
 class DatabaseHelper {
     /* Function returns a connection object to a database */
@@ -170,6 +170,6 @@ class DatabaseHelper {
 
     }
 
- ?> -->
+ ?>
 
  
