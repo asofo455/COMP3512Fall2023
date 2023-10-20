@@ -66,7 +66,7 @@ try {
                         <th>Genre</th>
                         <th>Popularity</th>
                         <!--Remove all items from the favorites list-->
-                        <th><a href="emptyFavorites.php"><button class="removeAll">Remove All</button></a></th>
+                        <th><a href="emptyfavorite.php"><button class="removeAll">Remove All</button></a></th>
                     </tr>
                     <!--Generate title, artist, year, genre, and popularity score through loop-->
                     <?php
