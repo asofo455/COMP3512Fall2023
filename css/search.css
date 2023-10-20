@@ -1,0 +1,150 @@
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for body and links */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee2dc; /* Light beige background */
+    color: #123c69; /* Dark blue text */
+}
+
+a {
+    text-decoration: none;
+    color: #ac3b61; /* Deep pink links */
+    transition: color 0.3s ease; /* Add color transition */
+}
+
+/* Header styles */
+header {
+    background-color: #123c69; /* Dark blue header background */
+    color: #fff; /* White header text */
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Add background-color transition */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff; /* White link text */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+section {
+    background-image: url('your-image-path.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.container {
+    background-color: rgba(186, 178, 181, 0.7); /* Light gray container with some transparency */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #123c69; /* Dark blue text */
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #123c69; /* Dark blue text */
+    margin-bottom: 10px;
+}
+
+/* Form elements */
+label {
+    font-weight: bold;
+    color: #123c69; /* Dark blue text */
+}
+
+input[type="text"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #bab2b5; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input[type="submit"] {
+    background-color: #ac3b61; /* Deep pink button */
+    color: #fff; /* White text */
+}
+
+input[type="reset"] {
+    background-color: #123c69; /* Dark blue button */
+    color: #fff; /* White text */
+}
+
+/* Footer styles */
+footer {
+    background-color: #123c69; /* Dark blue footer background */
+    color: #fff; /* White footer text */
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Add background-color transition */
+}
+
+.foot-container {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Footer links */
+a {
+    color: #fff; /* White link text */
+}
+
+/* Add a hover effect for links */
+a:hover {
+    color: #edc7b7; /* Light beige on hover */
+}
+
+/* Add a hover effect for the header */
+header:hover {
+    background-color: #eee2dc; /* Light beige on hover */
+}
+
+/* Add a hover effect for sections */
+section:hover {
+    transform: scale(1.02); /* Enlarge the section on hover */
+}

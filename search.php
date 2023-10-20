@@ -21,7 +21,10 @@
 ?>
 <DOCTYPE html>
     <head lang="en">
-    
+    <meta charset="utf-8">
+    <meta name="authors" content="Harsheen Nijjer"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
         <title>COMP 3512 Assign 1</title>
     </head>
     <body>
