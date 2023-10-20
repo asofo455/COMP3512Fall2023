@@ -6,11 +6,11 @@ require('include/databasehelper.inc.php');
 // ensure sessions works on this page
 session_start();
 // if no favorites in session, initialize it to empty array
-if(!isset($_SESSION["Favorites"])) {
-    $_SESSION["Favorites"] = [];
+if(!isset($_SESSION["favorite"])) {
+    $_SESSION["favorite"] = [];
 }
 // retrieve favorites array for this user session
-$favorites = $_SESSION["Favorites"];
+$favorite = $_SESSION["favorite"];
 //try catch block for single-song-page page
 try {
     //create connection

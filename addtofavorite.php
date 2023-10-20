@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (isset($_SESSION["Favorite"])) {
-$_SESSION["Favorite"] = [] ;
+if (isset($_SESSION["favorite"])) {
+$_SESSION["favorite"] = [] ;
 }
-$favorite = $_SESSION["Favorite"];
+$favorite = $_SESSION["favorite"];
 $favorite[] = $_GET['songs_id'];
-$_SESSION['Favorite'] = $favorite ;
+$_SESSION['favorite'] = $favorite ;
 header('Location: favorite.php');
 ?>
