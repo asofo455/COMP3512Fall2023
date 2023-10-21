@@ -75,6 +75,11 @@ h2 {
     border-style: solid;
     
 }
+th{
+    padding: 10px;
+    border: 2px solid;
+    border-color: black;
+}
 
 .headers {
     background-color: #123c69; /* Dark blue table header background */
@@ -83,6 +88,8 @@ h2 {
 
 .headers th {
     padding: 10px;
+    border: 2px solid;
+    border-color: white;
 }
 
 /* Table row styles */

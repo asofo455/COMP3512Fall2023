@@ -80,6 +80,8 @@ h2 {
 
 .headers th {
     padding: 10px;
+    border: 2px solid;
+    border-color: white;
 }
 
 /* Footer styles */
