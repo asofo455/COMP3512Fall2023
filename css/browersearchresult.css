@@ -73,6 +73,9 @@ h2 {
     border-collapse: collapse;
     font-family: 'Times New Roman', Times, serif;
     border-style: solid;
+    padding: 10px;
+    border: 2px solid;
+    border-color: black;
     
 }
 th{
