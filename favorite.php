@@ -19,7 +19,7 @@ try {
     $songData = new SongsDB($conn);
     $songs = [];
     //loop to retrieve song_id from favorites array
-    foreach($favorites as $getID){
+    foreach($favorite as $getID){
         $song = $songData->getSong($getID)[0];
         $songs[] = $song;
     }
