@@ -83,7 +83,7 @@ require('include/databasehelper.inc.php');
                 <?php
                 foreach($songs as $result) { ?>
                     <tr class="info">
-                    <td><a class="link" href= "single-song-page.php?song_id=<?= $result['song_id']; ?>"><?= $result['title']; ?></a></td>
+                    <td><a class="link" href= "single-song.php?song_id=<?= $result['song_id']; ?>"><?= $result['title']; ?></a></td>
                     <td><?= $result['artist_name']; ?></td>
                     <td><?= $result['year']; ?></td>
                     <td><?= $result['genre_name']; ?></td>
