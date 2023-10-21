@@ -1,5 +1,5 @@
    
-/* Css from https://www.w3schools.com/w3css/defaulT.asp*/   
+/* Css styles from https://www.w3schools.com/w3css/defaulT.asp*/   
 /* Color Combination from the following website - https://visme.co/blog/website-color-schemes/*/
 
 
@@ -70,6 +70,7 @@ h2 {
 .table {
     width: 100%;
     border-collapse: collapse;
+    border-style: solid;
 }
 
 .headers {
@@ -88,6 +89,7 @@ footer {
     text-align: center;
     padding: 10px;
     transition: background-color 0.3s ease; /* Add background-color transition */
+    grid-row: 1/3;
 }
 
 .foot-container {

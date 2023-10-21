@@ -15,7 +15,9 @@
         $genres = $genreData->getAll();
 
 
-    } catch (Exception $e) {
+    } 
+    // exception handling
+    catch (Exception $e) {
         die ($e->getMessage());
     }
 ?> 
@@ -30,7 +32,7 @@
     <body>
         <header>
         <nav class="flex-container">
-  <a href="index.php" target="_top">Home</a>
+            <a href="index.php" target="_top">Home</a>
             <a class="current" href="search.php" target="_top">Search</a>
             <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a href="favorite.php" target="_top">Favorites</a>
@@ -38,13 +40,12 @@
         </header>
         <main>
             <section>
-            <!--background image-->
-            <div class="image">
+         
                 <div class="container">
-                    <!--form to conduct search and output to results-page.php-->
-                    <form action="results-page.php" method="get" target="_blank">
+                    <form action="brower-search-results-page.php" method="get" target="_blank">
                     <h2>Song Search</h2>
                     <h4>Please select one option:</h4>
+
                     <!--Search by title-->
                     <div class="title">
                     <label for="title">Title: </label>
@@ -80,10 +81,12 @@
                     <!--Search by year-->
                     <div class="year">
                     <label for="year">Year: </label>
+
                     <!--Search year by less than-->
                     <input type="radio" id="lessYear" name="choose1">
                     <label for="lessYear">Less</label>
                     <input type="number" id="lessYear" name='year' min="2017" max="2018">
+
                     <!--Search year by greater than-->
                     <input type="radio" id="greaterYear" name="choose1">
                     <label for="greaterYear">Greater</label>
@@ -93,10 +96,12 @@
                     <!--Search by popularity score-->
                     <div class="popularity">
                     <label for="popularity">Popularity: </label>
+
                     <!--Search by popularity score by less than-->
                     <input type="radio" id="lessPopularity" name="choose1">
                     <label for="lessPopularity">Less</label>
                     <input type="number" id="lessPopularity" name='popularity' min="0" max="100">
+
                     <!--Search by popularity score by greater than-->
                     <input type="radio" id="greaterPopularity" name="choose1">
                     <label for="greaterYear">Greater</label>
@@ -104,9 +109,7 @@
                     </div>
                 
                     <div class="buttons">
-                    <!--Search and redirect to results-page.php-->
                     <input type="submit" value="Search" >
-                    <!--clear form-->
                     <input type="reset">
                     </div>
                     </form>

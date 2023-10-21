@@ -5,24 +5,26 @@ require('include/databasehelper.inc.php');
 
 // ensure sessions works on this page
 session_start();
-// if no favorites in session, initialize it to empty array
 if(!isset($_SESSION["favorite"])) {
     $_SESSION["favorite"] = [];
 }
+
 // retrieve favorites array for this user session
 $favorite = $_SESSION["favorite"];
-//try catch block for single-song-page page
+
+
+//try catch block 
 try {
     //create connection
     $conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
-    //connect to class
     $songData = new SongsDB($conn);
     $songs = [];
-    //loop to retrieve song_id from favorites array
+
     foreach($favorite as $getID){
         $song = $songData->getSong($getID)[0];
         $songs[] = $song;
     }
+
 //Exceptiona and error handling
 } catch (Exception $e) {
     die ($e->getMessage());
@@ -44,8 +46,7 @@ try {
 <body>
 <header>
     <nav class="flex-container">
- <!--links to other pages on the website-->
- <a href="index.php" target="_top">Home</a>
+            <a href="index.php" target="_top">Home</a>
             <a href="search.php" target="_top">Search</a>
             <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a class="current" href="favorite.php" target="_top">Favorites</a>
@@ -53,8 +54,6 @@ try {
 </header>
     <main>
         <section>
-            <!--background image-->
-            <div class="image">
             <div class="container">
             <h2>Favorites</h2>
             </div>
@@ -67,9 +66,12 @@ try {
                         <th>Year</th>
                         <th>Genre</th>
                         <th>Popularity</th>
-                        <!--Remove all items from the favorites list-->
+
+                        <!--Button to remove items-->
                         <th><a href="emptyfavorite.php"><button class="removeAll">Remove All</button></a></th>
                     </tr>
+
+                    
                     <!--Generate title, artist, year, genre, and popularity score through loop-->
                     <?php
                         foreach($songs as $s) { ?>

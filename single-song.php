@@ -18,7 +18,6 @@ require('include/databasehelper.inc.php');
 <body>
 <header>
     <nav class="flex-container">
-        <!--links to other pages on the website--> 
         <a href="index.php" target="_top"></i>Home</a>
         <a href="search.php" target="_top"></i>Search</a> 
         <a href="brower-search-results.php" target="_top"></i>Browse </a>
@@ -29,14 +28,10 @@ require('include/databasehelper.inc.php');
 
 <main>
 <section>
-    <!--loop through SongDB class to retrieve info--> 
     <main>
     <section>
-        <!--background image-->
-        <div class="image">
-        <!--Loop through SongsDB class to retrieve info-->
         <?php foreach($songs as $s) {  ?>
-            <!--List for song information-->
+    
             <h2 class = "ui header">Here's Your Song!</h2>
             <div class= "container">
             <ul class="description">
@@ -47,7 +42,7 @@ require('include/databasehelper.inc.php');
                 <li><span>Year: <?= $s['year'] ?></li> 
                 <li><span>Duration: <?= convertSeconds($s['duration']); ?></span></li>
             </div>
-            <!--List for song analysis and progress bars-->
+
             <h2 class = "ui header">The Goods</h2>
             <div class="container">
             <ul class="analysis"> 
@@ -67,7 +62,7 @@ require('include/databasehelper.inc.php');
     </section>
 </main>
 
-
+<!-- function to convert -->
 <?php 
     function convertSeconds($s) {
     $minutes = intval(($s/60)%60);

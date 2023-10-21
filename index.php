@@ -18,8 +18,7 @@ require('include/databasehelper.inc.php');
 <body>
 <header>
     <nav class="flex-container">
-  <!--links to other pages on the website-->
-  <a class="current" href="index.php" target="_top">Home</a>
+            <a class="current" href="index.php" target="_top">Home</a>
             <a href="search.php" target="_top">Search</a>
             <a href="brower-search-results.php" target="_top">Browse / Search Results</a>
             <a href="favorite.php" target="_top">Favorites</a>
@@ -27,7 +26,8 @@ require('include/databasehelper.inc.php');
         <main>
             <section>
                 <h2>Coming Soon!! Work in progress...</h2>
-                <!--headers that will contain lists-->
+
+                <!--header on the table-->
                 <table class= "table">
                     <tr class="headers">
                         <th>Top Genres</th>

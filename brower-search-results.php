@@ -63,8 +63,6 @@ require('include/databasehelper.inc.php');
         </nav>
         <main>
     <section>
-        <!--background image-->
-        <div class="image">
         <div class="container">
             <h2>Browse/Search Results</h2>
         </div>
@@ -79,7 +77,8 @@ require('include/databasehelper.inc.php');
                     <th>Popularity</th>
                     <th><a href="brower-search-results-page.php" target="_self"><button class="showButton"> Show All</button></a></th>
                 </tr>
-                <!--Generate title, artist, year, genre, and popularity score through loop-->
+
+                
                 <?php
                 foreach($songs as $result) { ?>
                     <tr class="info">
@@ -88,11 +87,12 @@ require('include/databasehelper.inc.php');
                     <td><?= $result['year']; ?></td>
                     <td><?= $result['genre_name']; ?></td>
                     <td><?= $result['popularity']; ?></td>
-                    <!--Enable ability to add song to favorites and go to favorites page with correct song-->
+
+                    <!-- adding songs to favorites-->
+
                     <td><a href="addtofavorite.php?song_id=<?= $result['song_id']; ?>" target="_blank">
                     <button class="favButton">Add to favorites</button></a></td>
 
-                    <!--When choosing "View" should link back to Single Song Page with correct song using the song_id as querystring-->
                     <td><a href="single-song.php?song_id=<?= $result['song_id']; ?>" target="_blank">
                     <button class="viewButton">View</button></a></td>
                     </tr>
@@ -109,7 +109,6 @@ require('include/databasehelper.inc.php');
 <footer>
     <div class="foot-container">COMP 3512 Web II; Athina Sofocleous & Harsheen Nijjer </div>
     <a href="https://github.com/asofo455/COMP3512Fall2023" target="_blank">Github Repo Link </a>
-    <a href="https://github.com/asofo455" target="_blank">Athina's Github Profile</a>
     <a href="https://github.com/hnijj156" target="_blank">Harsheen's Github Profile</a>
 </div>
 
