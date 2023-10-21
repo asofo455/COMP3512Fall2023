@@ -18,7 +18,7 @@
     } catch (Exception $e) {
         die ($e->getMessage());
     }
-?>
+?> 
 <DOCTYPE html>
     <head lang="en">
     <meta charset="utf-8">

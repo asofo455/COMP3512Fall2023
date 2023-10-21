@@ -89,11 +89,11 @@ require('include/databasehelper.inc.php');
                     <td><?= $result['genre_name']; ?></td>
                     <td><?= $result['popularity']; ?></td>
                     <!--Enable ability to add song to favorites and go to favorites page with correct song-->
-                    <td><a href="addToFavorites.php?song_id=<?= $result['song_id']; ?>" target="_blank">
+                    <td><a href="addtofavorite.php?song_id=<?= $result['song_id']; ?>" target="_blank">
                     <button class="favButton">Add to favorites</button></a></td>
 
                     <!--When choosing "View" should link back to Single Song Page with correct song using the song_id as querystring-->
-                    <td><a href="single-song-page.php?song_id=<?= $result['song_id']; ?>" target="_blank">
+                    <td><a href="single-song.php?song_id=<?= $result['song_id']; ?>" target="_blank">
                     <button class="viewButton">View</button></a></td>
                     </tr>
                     <?php 
